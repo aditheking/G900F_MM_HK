@@ -29,14 +29,10 @@ LOCALE_JPN ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_SEC_LOCAL
 JS_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_SEC_JS_PROJECT=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
 JS_TW_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_MACH_JS01LTEZT=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
 LOCALE_CHN_DUOS ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_MACH_H3GDUOS=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
-LOCALE_CHN_DUOS_CU ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_MACH_H3GDUOS_CU=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
 K_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_SEC_K_PROJECT=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
 S_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_SEC_S_PROJECT=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
 PATEK_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_SEC_PATEK_PROJECT=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
 LOCALE_JSGLTE_CHN_CMCC ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_MACH_JSGLTE_CHN_CMCC=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
-LOCALE_MACH_H3G_CHN_CMCC ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_MACH_H3G_CHN_CMCC=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
-LOCALE_MACH_H3G_CHN_OPEN ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_MACH_H3G_CHN_OPEN=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
-LOCALE_MACH_HLTE_CHN_CMCC ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_MACH_HLTE_CHN_CMCC=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
 H_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_SEC_H_PROJECT=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
 FRESCO_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_SEC_FRESCO_PROJECT=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
 F_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_SEC_F_PROJECT=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
@@ -63,6 +59,7 @@ ATLANTICLTE_ATT_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CON
 ATLANTICLTE_VZW_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_MACH_ATLANTICLTE_VZW=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
 ATLANTIC3G_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_SEC_ATLANTIC3G_COMMON=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
 ATLANTICLTE_USC_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_MACH_ATLANTICLTE_USC=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
+A5LTE_JPN_KDI_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_MACH_A5LTE_JPN_KDI=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
 PICASSO_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_SEC_PICASSO_PROJECT=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
 CHAGALL_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_SEC_CHAGALL_PROJECT=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
 KLIMT_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_SEC_KLIMT_PROJECT=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
@@ -93,11 +90,9 @@ T10_WIFI_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_MAC
 RUBENSLTE_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_MACH_RUBENSLTE_OPEN=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
 RUBENSWIFI_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_MACH_RUBENSWIFI_OPEN=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
 VASTALTE_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_MACH_VASTALTE_CHN_CMCC_DUOS=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
-CHAGALL_DCM_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_MACH_CHAGALL_DCM=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
-KACTIVE_SKT_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_MACH_KACTIVELTE_SKT=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
-KACTIVE_DCM_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_MACH_KACTIVELTE_DCM=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
-KACTIVE_KOR_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_MACH_KACTIVELTE_KOR=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
-
+HESTIALTE_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_MACH_HESTIALTE_EUR=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
+HESTIAATT_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_MACH_HESTIALTE_ATT=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
+MS01_KOR_LTE_PROJECT ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_MACH_MS01_KOR_LTE=y/) { $$of = "y"; break; } } print $$of;' $(KERNEL_CONFIG))
 
 ifeq "$(KERNEL_USE_OF)" "y"
 ifeq "$(K_PROJECT)" "y"
@@ -125,6 +120,9 @@ ifeq "$(MILLET3G_PROJECT)" "y"
     else
         DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8226/$(DTS_NAME)-sec-millet3geur*.dts)
     endif
+endif
+ifeq "$(MS01_KOR_LTE_PROJECT)" "y"
+DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8226/msm8926-sec-ms01ltekor-*.dts)
 endif
 ifeq "$(MILLETLTE_PROJECT)" "y"
 DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8226/msm8926-sec-milletlte-*.dts)
@@ -180,6 +178,9 @@ endif
 ifeq "$(ATLANTICLTE_USC_PROJECT)" "y"
 DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8226/msm8928-sec-atlanticlteusc*.dts)
 endif
+ifeq "$(A5LTE_JPN_KDI_PROJECT)" "y"
+DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8226/msm8928-sec-a5lte_jpn_kdi*.dts)
+endif
 ifeq "$(BERLUTI3G_PROJECT)" "y"
 DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8226/$(DTS_NAME)-sec-berluti3geur*.dts)
 endif
@@ -206,6 +207,12 @@ DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8226/$(DTS_NAME)-sec-v
 endif
 ifeq "$(VASTALTE_PROJECT)" "y"
 DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8226/$(DTS_NAME)-sec-vastalteduos*.dts)
+endif
+ifeq "$(HESTIALTE_PROJECT)" "y"
+DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8226/$msm8928-sec-hestia-r*.dts)
+endif
+ifeq "$(HESTIAATT_PROJECT)" "y"
+DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8226/$msm8928-sec-hestialteatt*.dts)
 endif
 ifeq "$(DEGASLTE_SPR_PROJECT)" "y"
 DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8226/msm8926-sec-degasltespr*.dts)
@@ -260,33 +267,12 @@ ifeq "$(H_PROJECT)" "y"
 			DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974/$(DTS_NAME)-sec-hltekor*.dts)
 		else
 			ifeq "$(LOCALE_CHN_DUOS)" "y"
-				ifeq "$(LOCALE_CHN_DUOS_CU)" "y"
-					DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974/$(DTS_NAME)-sec-h3gchncu*.dts)
-				else
-					DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974/$(DTS_NAME)-sec-h3gchnduos*.dts)
-				endif
+				DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974/$(DTS_NAME)-sec-h3gchnduos*.dts)
 			else
 				ifeq "$(LOCALE_JSGLTE_CHN_CMCC)" "y" 
 					DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974/$(DTS_NAME)-sec-jsglte-*.dts)
 				else
-					ifeq "$(LOCALE_MACH_H3G_CHN_CMCC)" "y" 
-						DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974/$(DTS_NAME)-sec-hlte-chn-r06.dts)
-						DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974/$(DTS_NAME)-sec-hlte-chn-r07.dts)
-						DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974/$(DTS_NAME)-sec-hlte-chn-r09.dts)
-					else 
-						ifeq "$(LOCALE_MACH_H3G_CHN_OPEN)" "y" 
-							DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974/$(DTS_NAME)-sec-hlte-chn-r03.dts)
-							DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974/$(DTS_NAME)-sec-hlte-chn-r07.dts)
-							DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974/$(DTS_NAME)-sec-hlte-chn-r09.dts)
-						else
-							ifeq "$(LOCALE_MACH_HLTE_CHN_CMCC)" "y" 
-								DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974/$(DTS_NAME)-sec-hlte-chn-r07.dts)
-								DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974/$(DTS_NAME)-sec-hlte-chn-r09.dts)
-							else
-								DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974/$(DTS_NAME)-sec-hlte-r*.dts)
-							endif
-						endif
-					endif
+					DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974/$(DTS_NAME)-sec-hlte-*.dts)
 				endif
 			endif
 		endif
@@ -301,10 +287,8 @@ endif
 ifeq "$(CHAGALL_PROJECT)" "y"
 	ifeq "$(CONFIG_MACH_CHAGALL_KDI)" "y"
 		DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974pro/$(DTS_NAME)pro-ac-sec-chagall*.dts)
-	else ifeq "$(CHAGALL_DCM_PROJECT)" "y"
-		DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974/$(DTS_NAME)-sec-chagalljpn*.dts)
 	else
-DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974/$(DTS_NAME)-sec-chagall-r*.dts)
+DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974/$(DTS_NAME)-sec-chagall*.dts)
 endif
 endif
 ifeq "$(KLIMT_PROJECT)" "y"
@@ -335,15 +319,7 @@ ifeq "$(JS_PROJECT)" "y"
 	endif
 endif
 ifeq "$(KACTIVE_PROJECT)" "y"
-	ifeq "$(KACTIVE_SKT_PROJECT)" "y"
-		DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974pro/$(DTS_NAME)pro-ac-sec-kactivelteskt*.dts)
-	else ifeq "$(KACTIVE_DCM_PROJECT)" "y"
-		DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974pro/$(DTS_NAME)pro-ac-sec-kactiveltedcm*.dts)
-	else ifeq "$(KACTIVE_KOR_PROJECT)" "y"
-		DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974pro/$(DTS_NAME)pro-ac-sec-kactiveltekor*.dts)
-	else
-		DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974pro/$(DTS_NAME)pro-ac-sec-kactivelte-*.dts)
-	endif
+DTS_FILES = $(wildcard $(TOP)/kernel/arch/arm/boot/dts/msm8974pro/$(DTS_NAME)pro-ac-sec-kactive*.dts)
 endif
 DTS_FILE = $(lastword $(subst /, ,$(1)))
 DTB_FILE = $(addprefix $(KERNEL_OUT)/arch/arm/boot/,$(patsubst %.dts,%.dtb,$(call DTS_FILE,$(1))))
@@ -399,34 +375,35 @@ $(KERNEL_OUT):
 $(KERNEL_CONFIG): $(KERNEL_OUT)
 ifeq ($(SEC_FACTORY_BUILD),true)
 	$(modi-facdefconfig)
-	$(MAKE) -C kernel O=../$(KERNEL_OUT) ARCH=arm CROSS_COMPILE=arm-linux-androideabi- VARIANT_DEFCONFIG=$(VARIANT_DEFCONFIG) DEBUG_DEFCONFIG=$(DEBUG_DEFCONFIG) SELINUX_DEFCONFIG=$(SELINUX_DEFCONFIG) SELINUX_LOG_DEFCONFIG=$(SELINUX_LOG_DEFCONFIG) factory_defconfig TIMA_DEFCONFIG=$(TIMA_DEFCONFIG)
+	$(MAKE) -C kernel O=../$(KERNEL_OUT) ARCH=arm CROSS_COMPILE=$(CROSS_COMPILE_PATH)arm-eabi- VARIANT_DEFCONFIG=$(VARIANT_DEFCONFIG) DEBUG_DEFCONFIG=$(DEBUG_DEFCONFIG) SELINUX_DEFCONFIG=$(SELINUX_DEFCONFIG) SELINUX_LOG_DEFCONFIG=$(SELINUX_LOG_DEFCONFIG) factory_defconfig TIMA_DEFCONFIG=$(TIMA_DEFCONFIG)
 else
-	$(MAKE) -C kernel O=../$(KERNEL_OUT) ARCH=arm CROSS_COMPILE=arm-linux-androideabi- VARIANT_DEFCONFIG=$(VARIANT_DEFCONFIG) DEBUG_DEFCONFIG=$(DEBUG_DEFCONFIG) SELINUX_DEFCONFIG=$(SELINUX_DEFCONFIG) SELINUX_LOG_DEFCONFIG=$(SELINUX_LOG_DEFCONFIG) $(KERNEL_DEFCONFIG) TIMA_DEFCONFIG=$(TIMA_DEFCONFIG)
+	$(MAKE) -C kernel O=../$(KERNEL_OUT) ARCH=arm CROSS_COMPILE=$(CROSS_COMPILE_PATH)arm-eabi- VARIANT_DEFCONFIG=$(VARIANT_DEFCONFIG) DEBUG_DEFCONFIG=$(DEBUG_DEFCONFIG) SELINUX_DEFCONFIG=$(SELINUX_DEFCONFIG) SELINUX_LOG_DEFCONFIG=$(SELINUX_LOG_DEFCONFIG) $(KERNEL_DEFCONFIG) TIMA_DEFCONFIG=$(TIMA_DEFCONFIG)
 endif
+
 $(KERNEL_OUT)/piggy : $(TARGET_PREBUILT_INT_KERNEL)
 	$(hide) gunzip -c $(KERNEL_OUT)/arch/arm/boot/compressed/piggy.gzip > $(KERNEL_OUT)/piggy
 
 $(TARGET_PREBUILT_INT_KERNEL): $(KERNEL_OUT) $(KERNEL_CONFIG) $(KERNEL_HEADERS_INSTALL)
-	$(MAKE) -C kernel O=../$(KERNEL_OUT) ARCH=arm CROSS_COMPILE=arm-linux-androideabi-
+	$(MAKE) -C kernel O=../$(KERNEL_OUT) ARCH=arm CROSS_COMPILE=$(CROSS_COMPILE_PATH)arm-eabi-
 ifeq "$(USE_MODULE)" "y"
-	$(MAKE) -C kernel O=../$(KERNEL_OUT) ARCH=arm CROSS_COMPILE=arm-linux-androideabi- modules
-	$(MAKE) -C kernel O=../$(KERNEL_OUT) INSTALL_MOD_PATH=../../$(KERNEL_MODULES_INSTALL) INSTALL_MOD_STRIP=1 ARCH=arm CROSS_COMPILE=arm-linux-androideabi- modules_install
+	$(MAKE) -C kernel O=../$(KERNEL_OUT) ARCH=arm CROSS_COMPILE=$(CROSS_COMPILE_PATH)arm-eabi- modules
+	$(MAKE) -C kernel O=../$(KERNEL_OUT) INSTALL_MOD_PATH=../../$(KERNEL_MODULES_INSTALL) INSTALL_MOD_STRIP=1 ARCH=arm CROSS_COMPILE=$(CROSS_COMPILE_PATH)arm-eabi- modules_install
 	$(mv-modules)
 	$(clean-module-folder)
 endif
 	$(append-dtb)
 
 $(KERNEL_HEADERS_INSTALL): $(KERNEL_OUT) $(KERNEL_CONFIG)
-	$(MAKE) -C kernel O=../$(KERNEL_OUT) ARCH=arm CROSS_COMPILE=arm-linux-androideabi- headers_install
+	$(MAKE) -C kernel O=../$(KERNEL_OUT) ARCH=arm CROSS_COMPILE=$(CROSS_COMPILE_PATH)arm-eabi- headers_install
 
 kerneltags: $(KERNEL_OUT) $(KERNEL_CONFIG)
-	$(MAKE) -C kernel O=../$(KERNEL_OUT) ARCH=arm CROSS_COMPILE=arm-linux-androideabi- tags
+	$(MAKE) -C kernel O=../$(KERNEL_OUT) ARCH=arm CROSS_COMPILE=$(CROSS_COMPILE_PATH)arm-eabi- tags
 
 kernelconfig: $(KERNEL_OUT) $(KERNEL_CONFIG)
 	env KCONFIG_NOTIMESTAMP=true \
-	     $(MAKE) -C kernel O=../$(KERNEL_OUT) ARCH=arm CROSS_COMPILE=arm-linux-androideabi- menuconfig
+	     $(MAKE) -C kernel O=../$(KERNEL_OUT) ARCH=arm CROSS_COMPILE=$(CROSS_COMPILE_PATH)arm-eabi- menuconfig
 	env KCONFIG_NOTIMESTAMP=true \
-	     $(MAKE) -C kernel O=../$(KERNEL_OUT) ARCH=arm CROSS_COMPILE=arm-linux-androideabi- savedefconfig
+	     $(MAKE) -C kernel O=../$(KERNEL_OUT) ARCH=arm CROSS_COMPILE=$(CROSS_COMPILE_PATH)arm-eabi- savedefconfig
 	cp $(KERNEL_OUT)/defconfig kernel/arch/arm/configs/$(KERNEL_DEFCONFIG)
 
 endif
